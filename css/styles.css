@@ -1,0 +1,236 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0 0.75rem;
+    background: linear-gradient(180deg, #f0f0f0, #ffffff);
+    font-family: 'Montserrat', sans-serif;
+}
+
+section.about {
+    margin-top: 2rem;
+
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #4E5150;
+}
+
+section.about img{
+    width: 6.36rem;
+    margin-bottom: 0.75rem;
+
+    border-radius: 16px;
+}
+
+section.about span{
+    margin-top: 0.25rem;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+
+    color: #A9A9A9;
+}
+
+/******************************************************/
+
+section.status {
+    display: flex;
+    justify-content: space-between;
+    max-width: 16rem;
+    margin: 0 auto;
+
+    margin-top: 0.75rem;
+}
+
+section.status div{
+    width: 78px;
+    height: 52px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #E5E5E5;
+    border-radius: 12px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #4E5150;
+}
+
+section.status div span {
+    font-size: 12px;
+
+    color: #BDBDBD;
+}
+
+/*********************************************************/
+
+section.gallery {
+    margin: 2.5rem 0.75rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(110px, 1fr));
+    grid-template-rows: repeat(3, minmax(110px, 1fr));
+
+    grid-template-areas: 
+                "photo1 photo2 photo2"
+                "photo3 photo3 photo4"
+                "photo5 photo6 photo4";
+    gap: 0.75rem;
+
+    justify-content: center;
+}
+
+section.gallery div {
+    border-radius: 12px;
+
+    box-shadow: 0px 4px 6px rgba(124, 38, 38, 0.15);
+}
+
+section.gallery div:nth-child(1){
+    background: url("../images/photo1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    grid-area: photo1;
+}
+
+section.gallery div:nth-child(2){
+    background: url("../images/photo2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    grid-area: photo2;
+}
+
+section.gallery div:nth-child(3){
+    background: url("../images/photo3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    grid-area: photo3;
+}
+
+section.gallery div:nth-child(4){
+    background: url("../images/photo_4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    grid-area: photo4;
+}
+
+section.gallery div:nth-child(5){
+    background: url("../images/photo5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    grid-area: photo5;
+}
+
+section.gallery div:nth-child(6){
+    background: url("../images/photo6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    grid-area: photo6;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 17px;
+
+    text-align: center;
+
+    color: #B9BDCF;
+}
+
+/**********************************************************/
+
+@media (min-width: 510px) {
+    body{
+        padding: 0 25%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    body{
+        padding: 0 25%;
+    }
+
+    section.about {
+        margin-top: 4rem;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    section.about img{
+        width: 9.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    section.about span{
+        margin-top: 0.5rem;
+        font-size: 14px;
+    }
+
+    section.status {
+        max-width: 21.75rem;
+        margin-top: 1.5rem;
+    }
+
+    section.status div{
+        width: 100px;
+        height: 67px;
+    
+        font-size: 18px;
+    }
+  
+    section.status div span {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    section.gallery {
+        margin: 4rem 0;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: repeat(3, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    section.gallery div {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media (min-width: 1024px){
+    section.gallery {
+        margin: 4rem 0;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        grid-template-rows: repeat(3, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+
